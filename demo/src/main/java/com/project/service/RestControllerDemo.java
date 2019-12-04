@@ -2,6 +2,7 @@ package com.project.service;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -12,10 +13,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.project.model.Persona;
+import com.project.model.User;
 import com.project.repository.IpersonRepo;
 
+@CrossOrigin()
 @RestController
-@RequestMapping("/personas")
+@RequestMapping({"/personas"})
 public class RestControllerDemo {
 
 	@Autowired
@@ -41,8 +44,11 @@ public class RestControllerDemo {
 		repo.deleteById(id);
 	}
 	
-	
-	
-	
+	@GetMapping(produces = "application/json")
+	@RequestMapping({ "/validateLogin" })
+	public User validateLogin() {
+		return new User("User successfully authenticated");
+	}
+		
 	
 }

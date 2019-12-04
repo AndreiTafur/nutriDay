@@ -14,6 +14,9 @@ public class Persona  {
 	
 	@Column(name="nombre",length = 50)
 	private String nombre;
+	
+	@Column(name="password",length = 50)
+	private String password;
 
 	public int getIdpersona() {
 		return idpersona;
@@ -30,5 +33,15 @@ public class Persona  {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	
+	
 		
 }
