@@ -1,0 +1,22 @@
+<div class="jumbotron">
+    <div class="container">
+        <div class="table-responsive">
+  <table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">nombre</th>
+    <th scope="col">clave</th>
+    <th scope="col">Opciones</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let persona of personas">
+          <td>{{persona.nombre}}</td>
+          <td>{{persona.idpersona}}</td>
+          <td><button class="btn btn-danger" (click)="deleteEmployee(persona)"> Eliminar persona</button></td>
+          </tr>
+  </tbody>
+    </table>
+  </div>
+</div>
+  </div>

@@ -1,0 +1,9 @@
+.container {
+    padding: 16px;
+    width: 40%;
+  }
+
+  tr {
+    width: 50%; 
+    height: 10px; 
+    }

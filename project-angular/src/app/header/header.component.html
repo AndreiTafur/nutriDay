@@ -1,0 +1,12 @@
+<header>
+  <nav class ="navbar navbar-expand-md navbar-dark bg-dark">
+  <div><a href="https://www.javainuse.com" class="navbar-brand">Nutriday</a></div>
+  
+  <ul class="navbar-nav">
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/" class="nav-link">Ver personas Registradas</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/addemployee" class="nav-link">Agregar personas</a></li>
+    <li><a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Ingresar</a></li>
+    <li><a *ngIf="loginService.isUserLoggedIn()" routerLink="/logout" class="nav-link">Cerrar sesión</a></li>
+  </ul>
+  </nav>
+  </header>

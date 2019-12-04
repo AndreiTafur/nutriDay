@@ -1,0 +1,21 @@
+<div class="jumbotron">
+    <div class="container">
+  <h2 class="text-center">Agregar usuarios</h2>
+  <form>
+      <div class="form-group">
+          <label for="empId"><b>Identifación</b></label>
+          <input [(ngModel)]="user.idpersona" placeholder="Identifación" name="Employee Id" class="form-control" id="employeeid">
+        </div>
+    <div class="form-group">
+      <label for="name"><b>Nombre</b></label>
+      <input type="name" [(ngModel)]="user.nombre" placeholder="Nombre" name="name" class="form-control" id="name">
+    </div>
+  
+    <div class="form-group">
+      <label for="designation"><b>Password</b></label>
+      <input [(ngModel)]="user.password" placeholder="Password" name="Password" class="form-control" id="designation">
+    </div>
+   <button class="btn btn-success" (click)="createEmployee()" style="align-content: center;">Crear</button>
+  </form>
+  </div>
+  </div>
